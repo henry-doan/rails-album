@@ -1,0 +1,45 @@
+// Place all the styles related to the songs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-image: url('https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66fb9d30c34fe2b1db28563c31c42c22');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Oswald', sans-serif;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 20px;
+}
+
+.album {
+  background: rgba(32, 29, 29, 0.2);
+  box-shadow: 0 0 5px rgba(20, 16, 16, 0.1);
+  padding: 20px;
+  display: grid;
+  grid-gap: 10px; 
+  align-items: center;
+  font-weight: 100;
+}
+
+.lt-cover {
+  grid-template-columns: 150px 1fr;
+}
+
+.rt-cover {
+  grid-template-columns: 1fr 150px;
+}
+
+.cover {
+  width: 100%;
+}
+
+.ghost {
+    opacity: .4;
+}
