@@ -1,7 +1,7 @@
 <div class='collection'>
   <% @songs.each do |s|%>
-    <div>
-      <div class="album lt-cover">
+    <div class="album">
+      <div class="lt-cover">
         <img class="cover" src=<%= "https://source.unsplash.com/random/300x300?v=" + s.id.to_s %>>
         <div class="info">
           <h2 class="title"><%= s.title %></h2>
@@ -10,8 +10,8 @@
         </div>
       </div>
       <hr />
-      <button class="btn modal-trigger" data-target="showModal"><i class="material-icons">album</i>Show</button>
-      <div id="showModal" class="modal bottom-sheet">
+      <button class="btn modal-trigger" data-target=<%="showModal" + s.id.to_s %>><i class="material-icons left">album</i>Show</button>
+      <div id=<%="showModal" + s.id.to_s %> class="modal bottom-sheet">
         <div class="modal-content">
           <h4><%= s.title %></h4>
           <p><%= s.artist %></p>
@@ -21,8 +21,8 @@
         </div>
       </div>
 
-      <button class="btn"><i class="material-icons">edit</i>Edit</button>
-      <button class="btn"><i class="material-icons">clear</i>Delete</button>
+      <button class="btn"><i class="material-icons left">edit</i>Edit</button>
+      <button class="btn"><i class="material-icons left">clear</i>Delete</button>
     </div>
   <% end %>
   <%= link_to 'Create a new Song', new_song_path %>
