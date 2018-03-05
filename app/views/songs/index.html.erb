@@ -1,6 +1,6 @@
 <div class='collection'>
   <% @songs.each do |s|%>
-    <div class="album">
+    <div class="song" data-id=<%= s.id %>>
       <div class="lt-cover">
         <img class="cover" src=<%= "https://source.unsplash.com/random/300x300?v=" + s.id.to_s %>>
         <div class="info">
@@ -22,7 +22,7 @@
       </div>
 
       <button class="btn"><i class="material-icons left">edit</i>Edit</button>
-      <button class="btn"><i class="material-icons left">clear</i>Delete</button>
+      <button class="btn" id="delete-song"><i class="material-icons left">clear</i>Delete</button>
         
     </div>
   <% end %>
