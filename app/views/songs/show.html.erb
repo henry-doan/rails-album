@@ -1,0 +1,30 @@
+  <div>
+    <h4><%= @song.title %></h4>
+    <p><%= @song.artist %></p>
+  </div>
+  <div >
+    <a href="#!" class="waves-effect waves-green btn-flat">play</a>
+
+    <%= link_to edit_song_path(@song), class: 'btn yellow' do %>
+      <i class="material-icons left">edit</i>Edit
+    <% end %>
+
+    <%= link_to song_path(@song),  method: :delete, class: 'btn red' do %>
+      <i class="material-icons left">clear</i>Delete
+    <% end %>
+  </div>
+
+<div class="fixed-action-btn horizontal click-to-toggle">
+  <a class="btn-floating btn-large blue-grey">
+    <i class="material-icons">menu</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating yellow darken-1"><i class="material-icons">headset</i></a></li>
+    <li>
+      <%= link_to songs_path, class: 'btn-floating orange' do %>
+        <i class="material-icons">queue_music</i>
+      <% end %>
+    </li>
+    <li><a class="btn-floating blue"><i class="material-icons">help_outline</i></a></li>
+  </ul>
+</div>

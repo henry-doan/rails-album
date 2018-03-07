@@ -10,19 +10,9 @@
         </div>
       </div>
       <hr />
-      <button class="btn modal-trigger" data-target=<%="showModal" + s.id.to_s %>><i class="material-icons left">album</i>Show</button>
-      <div id=<%="showModal" + s.id.to_s %> class="modal bottom-sheet">
-        <div class="modal-content">
-          <h4><%= s.title %></h4>
-          <p><%= s.artist %></p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">play</a>
-        </div>
-      </div>
-
-      <button class="btn"><i class="material-icons left">edit</i>Edit</button>
-      <button class="btn" id="delete-song"><i class="material-icons left">clear</i>Delete</button>
+      <%= link_to song_path(s), class: 'btn green' do %>
+        <i class="material-icons left">album</i>Show
+      <% end %>
         
     </div>
   <% end %>
